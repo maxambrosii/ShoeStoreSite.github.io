@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> SS - Shoes Shop </title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+
+	<div class="main">
+		<div class="name">
+			Shoes Shop
+		</div>
+
+		<div class="shoe">
+			
+			<!-- 1 -->
+
+			<div class="thing">
+				
+				<div class="ThingName">
+					Nike Bruin Mid
+				</div>
+
+				<div>
+					<img class="ThingImg" src="http://pngimg.com/uploads/running_shoes/running_shoes_PNG5816.png">
+				</div>
+
+				<div class="ThingPrice">
+					$29.99
+				</div>
+
+				<div class="ThingPrice">
+					How much? <input id="inputOption1" type="number" name="" value="1">
+				</div>
+
+				<div>
+					<input class="buttonOption" type="button" name="" value="Add to Basket" onclick="addToCart(1)">
+					★
+				</div>
+			</div>
+
+				<!-- 2 -->
+
+				<div class="thing">
+				
+					<div class="ThingName">
+						Converso All Star Mono Ox
+					</div>
+
+					<div>
+						<img class="ThingImg" src="https://www.freepngimg.com/thumb/shoes/28172-8-nike-shoes-image.png">
+					</div>
+
+					<div class="ThingPrice">
+						$45.00
+					</div>
+
+					<div class="ThingPrice">
+						How much? <input id="inputOption2" type="number" name="" value="1">
+					</div>
+
+					<div>
+						<input class="buttonOption" type="button" name="" value="Add to Basket" onclick="addToCart(2)">
+						★
+					</div>
+				</div>
+
+				<!-- 3 -->
+
+				<div class="thing">
+				
+					<div class="ThingName">
+						Converse Simpsons Bart Hi Trainers
+					</div>
+
+					<div>
+						<img class="ThingImg" src="https://i.ya-webdesign.com/images/new-shoe-png-4.png">
+					</div>
+		
+					<div class="ThingPrice">
+						$24.99
+					</div>
+
+					<div class="ThingPrice">
+						How much? <input id="inputOption3" type="number" name="" value="1">
+					</div>
+
+					<div>
+						<input class="buttonOption" type="button" name="" value="Add to Basket" onclick="addToCart(3)">
+						★
+					</div>
+				</div>
+
+				<div class="cart">
+					<div class="CartName">
+						Shopping Cart
+					</div>
+
+					<div class="CartItems">
+						Total items: <b id="TotalItems">0</b>
+					</div>
+
+					<div class="CartItems">
+						Total units: <b id="TotalUnits">0</b>
+					</div>
+
+					<div class="CartItems">
+						Total: <b id="Total">$0.00</b>
+					</div>	
+				</div>
+			</div>		
+		</div>
+
+		<script>
+    
+    let items = 0;
+    let units = 0;
+    let total = 0;
+
+    function addToCart(choice){
+
+      switch (choice){
+        case 1:
+          units += +1;
+          items += +inputOption1.value;
+          total += +29.99 * inputOption1.value;
+
+          TotalUnits.innerHTML = units;
+          TotalItems.innerHTML = items;
+          Total.innerHTML = '$' + total.toFixed(2); 
+        break;
+        
+        case 2:
+          units += +1;
+          items += +inputOption2.value;
+          total += +45 * inputOption2.value;
+
+          TotalUnits.innerHTML = units;
+          TotalItems.innerHTML = items;
+          Total.innerHTML = '$' + total.toFixed(2); 
+        break;
+        
+        case 3:
+          units += +1;
+          items += +inputOption3.value;
+          total += +24.99 * inputOption3.value;
+
+          TotalUnits.innerHTML = units;
+          TotalItems.innerHTML = items;
+          Total.innerHTML = '$' + total.toFixed(2); 
+        break;
+      };      
+
+    };
+
+  </script>
+	</body>
+</html>	
